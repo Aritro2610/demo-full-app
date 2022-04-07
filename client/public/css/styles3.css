@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* box-sizing: border-box; */
+}
+.fcontainer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fcontainer .logo img{
+  background-color: transparent;
+}
+
+/* .container > div {
+  flex: 1;
+  flex-shrink: 1;
+} */
+
+.bar1{
+  width: 70%;
+}
+.unorderlist{
+  margin: 0px 0px;
+  width: 100%;
+  list-style-type: none;
+}
+
+li{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+
+ul li a{
+  padding: 0 20px;
+  text-decoration: none;
+  color : #3a3a3a
+}
+
+ul li a:hover{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid red;
+  transition: 0.1s;
+}
+
+.btnjoin {
+  padding: 0px 5px;
+  position: relative;
+  left: 0%;
+  border-color: blue;
+  border-width: 3px;
+  font-size: 1.2rem;
+  color: blue;
+  border-radius: 7px;
+}
+
+.loginbtn {
+  padding: 0px 5px;
+  border-color: green;
+  position: relative;
+  left: 8%;
+  border-width: 3px;
+  font-size: 1.2rem;
+  color: green;
+  border-radius: 7px;
+}
+.btnjoin:hover {
+  color: white;
+  border-color: white;
+  background-color: blue;
+}
+.loginbtn:hover {
+  color: white;
+  border-color: white;
+  background-color: green;
+}
+.checkbtn {
+  font-size: 30px;
+  color: blue;
+  float: right;
+  line-height: 100px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: white url(/img/wave.png);
+}
+
+#wave1 {
+  z-index: 1000;
+  opacity: 0.1;
+  animation: animatewave_01 180s linear infinite;
+}
+
+#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  animation: animatewave_02 180s linear infinite;
+}
+
+#wave3 {
+  z-index: 998;
+  opacity: 1;
+  animation: animatewave_03 180s linear infinite;
+}
+
+@keyframes animatewave_01 {
+  0% {
+      background-position-x: 100000px;
+  }
+  100% {
+      background-position-x: 0px;
+  }
+}
+
+@keyframes animatewave_02 {
+  0% {
+      background-position-x: 0px;
+  }
+  100% {
+      background-position-x: 100000px;
+  }
+}
+
+@keyframes animatewave_03 {
+  0% {
+      background-position-x: 10000px;
+  }
+  100% {
+      background-position-x: 0px;
+  }
+}
+
+.footer1 {
+  background: #3586ff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  margin-top: 76px;
+}
+
+.footer1 .social-icons,
+.legals,
+.copywrite {
+  text-align: center;
+}
+
+.footer1 .social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer1 .social-icons a {
+  font-size: 2rem;
+  color: white;
+  list-style: none;
+  margin: 0px 20px 0px 20px;
+}
+
+.linkedin:hover {
+  color: #004add;
+}
+
+.discord:hover {
+  color: rgb(17, 0, 116);
+}
+
+.insta:hover {
+  color: palevioletred;
+}
+
+.twitter:hover {
+  color: #3a3a3a;
+}
+
+.footer1 .social-icons a:hover {
+  margin-top: -10px;
+}
+
+.legals {
+  display: flex;
+  flex-direction: row;
+}
+
+.legals a {
+  text-decoration: none;
+  color: black;
+  margin: auto 20px;
+}
+
+.legals a:hover {
+  color: white;
+  border-bottom: 2px solid red;
+  transition: 0.2s;
+}
+
+@media (max-width: 790px) {
+  .checkbtn {
+    display: block;
+  }
+ 
+  .unorderlist{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #004add;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .bar1 ul li {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+    line-height: 80px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .bar1 ul li a {
+    font-size: 20px;
+    color: #fff ;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  sc {
+    background-color: orchid;
+  }
+  .loginbtn{
+    left: 0%;
+  }
+}
+
+@media(max-width:993px){
+  /* .waves{
+    width: 100vw;
+  } */
+  /* .footer1{
+    width: 105%;
+    border-color:#004aad;
+  } */
+}

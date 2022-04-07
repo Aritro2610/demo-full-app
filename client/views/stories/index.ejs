@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/css/styleslogin.css">
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <%-include("../layouts/header.ejs")%>
+    <h1>Post</h1>
+    <div class="row">
+        <%if(stories.length>0){%>
+            <%stories.forEach(stories=>{%>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <!-- <div class="card-image">
+                            {{!--Todo:edit icon--}}
+                            <a id="editbtn" class="btn-floating halfway-fab blue" href="/stories/<%=stories._id%>/edit"><i class="fas fa-edit fa-small"></i></a>
+                        </div> -->
+                        <div class="card-content center-align">
+                            <p>Title:<%=stories.title%></p>
+                                Read IT
+                            <br>
+                            <div class="chip">
+                                <img src="<%=stories.user.image%>" alt="theimage" class="circle responsive-img img-small">
+                                <a href="/stories/user/<%=stories.user.id%>"><%=stories.user.displayName%></a>
+                            </div>
+                        </div>
+
+                        <div class="card-action center-align">
+                            <a href="/stories/<%=stories.id%>" class="btn-gray">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+            <%}else{%>
+            <p>No Public Story available </p>
+            <%}%>
+    </div>
+</body>
+</html>
