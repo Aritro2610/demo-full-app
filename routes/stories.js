@@ -53,10 +53,8 @@ router.get('/:id/edit',ensureAuth,async(req,res)=>{
         // console.log(req.user.id)
         // console.log(story.user)
         res.redirect('/stories')
-    }else{
-        // console.log(req.user.id)
-        // console.log(story.user)
-        res.render('stories/edit',{story})
+    }else{   
+        res.render('stories/edit',{story});
     }
 })
 router.put('/:id',ensureAuth,async(req,res)=>{
